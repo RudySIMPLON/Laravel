@@ -13,7 +13,15 @@ class CreatePersonnesTable extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('personnes', function (Blueprint $table) {
+
+            $table->increments('id');
+            $table->string('name');
+            $table->string('surname');
+            $table->string('email')->unique();
+            $table->date('birthday');
+            $table->timestamps();
+        });
     }
 
     /**
