@@ -8,6 +8,35 @@
     });
 </script>
 
+  <h1>Liste des personnes</h1>
+
+
+    <div class="col-sm-4">
+
+       <form action="/add" method="post">
+       {{csrf_field()}}
+    
+        <label for="surname" style="font-size: 20px">Nom: 
+          <input type="text" name="surname" id="title">
+        </label>
+        <label for="surname" style="font-size: 20px">Prenom: 
+          <input type="text" name="name" id="text">
+        </label>
+
+        <label for="email" style="font-size: 20px">email: 
+          <input type="email" name="email" id="email">
+        </label>
+
+        <label for="birthday" style="font-size: 20px">date de naissance: 
+        <input type="text" name="birthday" id="birthday">
+        </label>
+        <input type="submit" class="btn btn-success"> 
+
+     </form>    
+
+</div>
+
+
 <table id="myTable" class="table-stripped table table-bordered">
 
     <thead>
