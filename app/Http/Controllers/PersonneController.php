@@ -19,9 +19,31 @@ class PersonneController extends Controller
 		$personnes->name = $request->name;
 		$personnes->surname = $request->surname;
 		$personnes->email = $request->email;
-          
+        $personnes->birthday = $request->birthday;
 		$personnes->save();
 		return back();
-		
+
 	}
+
+		public function edit_form($id){
+
+		$personnes=Personne::find($id);
+	
+		return view('edit',compact('personnes'));
+
+		}
+
+		public function check_edit($id,Request $request){
+		
+		$personnes= Personne::find($id);
+		
+		$personnes->name = $request->name;
+		$personnes->surname = $request->surname;
+		$personnes->email = $request->email;
+		$personnes->birthday = $request->birthday;
+		$personnes->save();
+		return redirect('/');
+
+	}
+
 }
