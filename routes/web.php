@@ -15,3 +15,7 @@ Route::get('/','PersonneController@get_table');
 
 Route::Post('/add', 'PersonneController@add_people');
 
+Route::get('/edit/{id}','PersonneController@edit_form');
+
+
+Route::Post('/editCheck/{id}','PersonneController@check_edit');
