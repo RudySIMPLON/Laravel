@@ -57,7 +57,8 @@
             <th>{{$personne->surname}}</th>
             <th>{{$personne->birthday}}</th>
             <th>{{$personne->email}}</th>
-            <th><form action="">
+            <th>
+            <form action="/edit/{{$personne->id}}" method="get">
                 <button class="btn btn-primary">modifier</button>
             </form>
             </th>
