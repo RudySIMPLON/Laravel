@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('list');
-});
+Route::get('/',[
+	'as' => 'list',
+	'uses' => 'PersonneController@get_table'
+]);
