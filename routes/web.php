@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/',[
-	'as' => 'list',
-	'uses' => 'PersonneController@get_table'
-]);
+Route::get('/','PersonneController@get_table');
+
+Route::Post('/add', 'PersonneController@add_people');
+
