@@ -7,6 +7,14 @@ use App\Personne;
 
 class PersonneController extends Controller
 {
+
+	public function return_detail(){
+		$personnes = Personne::All();
+		return view('detail',compact('personnes'));
+
+	}
+		
+
 	public function get_table (){
 
 		$personnes = Personne::All();
@@ -44,6 +52,12 @@ class PersonneController extends Controller
 		$personnes->save();
 		return redirect('/');
 
+	}
+
+	public function delete($id){
+		$personnes = Personne::find($id);
+		$personnes->delete();
+		return back();
 	}
 
 }
