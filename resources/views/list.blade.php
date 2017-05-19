@@ -13,25 +13,8 @@
 
     <div class="col-sm-4">
 
-       <form action="/add" method="post">
-       {{csrf_field()}}
-    
-        <label for="surname" style="font-size: 20px">Nom: 
-          <input type="text" name="surname" id="title">
-        </label>
-        <label for="surname" style="font-size: 20px">Prenom: 
-          <input type="text" name="name" id="text">
-        </label>
-
-        <label for="email" style="font-size: 20px">email: 
-          <input type="email" name="email" id="email">
-        </label>
-
-        <label for="birthday" style="font-size: 20px">date de naissance: 
-        <input type="text" name="birthday" id="birthday">
-        </label>
-        <input type="submit" class="btn btn-success"> 
-
+       <form action="/detail" method="get">
+       <button> ajouter</button>
      </form>    
 
 </div>
@@ -62,7 +45,7 @@
                 <button class="btn btn-primary">modifier</button>
             </form>
             </th>
-            <th><form action="">
+            <th><form action="/delete/{{$personne->id}}">
             <button class="btn btn-primary">Supprimer</button>
             </form>
             </th>
