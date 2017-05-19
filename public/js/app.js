@@ -768,9 +768,7 @@ module.exports = g;
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-$(document).ready(function () {
-  $('#myTable').DataTable();
-});
+
 
 /**
  * First we will load all of this project's JavaScript dependencies which
