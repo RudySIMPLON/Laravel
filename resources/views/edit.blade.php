@@ -1,9 +1,10 @@
 @extends('base')
 
 @section('content')
+
 <h1>Modification </h1>
 
-<div class="col-sm-4">
+<div class="col-sm-12">
 	<form action="/editCheck/{{$personnes->id}}" method="post">
 		{{csrf_field()}}
 		<label for="surname">Nom

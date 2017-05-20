@@ -8,17 +8,14 @@
     });
 </script>
 
-  <h1>Liste des personnes</h1>
+<div class="text-center">
+    <h1>Liste Utilisateur</h1><br>
 
+    <form action="/detail" method="get">
+        <button value="">Ajouter un Utilisateur</button>
+    </form>    
 
-    <div class="col-sm-4">
-
-       <form action="/detail" method="get">
-       <button> ajouter</button>
-     </form>    
-
-</div>
-
+</div><br><br>
 
 <table id="myTable" class="table-stripped table table-bordered">
 
@@ -41,20 +38,20 @@
             <th>{{$personne->birthday}}</th>
             <th>{{$personne->email}}</th>
             <th>
-            <form action="/edit/{{$personne->id}}" method="get">
-                <button class="btn btn-primary">modifier</button>
-            </form>
+                <form action="/edit/{{$personne->id}}" method="get">
+                    <button class="btn btn-primary">modifier</button>
+                </form>
             </th>
             <th><form action="/delete/{{$personne->id}}">
-            <button class="btn btn-primary">Supprimer</button>
+                <button class="btn btn-primary">Supprimer</button>
             </form>
-            </th>
+        </th>
 
-        </tr>
+    </tr>
 
 
-        @endforeach
-    </tbody>
+    @endforeach
+</tbody>
 </table>
 
 <div id="example">

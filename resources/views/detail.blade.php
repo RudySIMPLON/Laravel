@@ -8,34 +8,62 @@
     });
 </script>
 
-  <h1>Liste des personnes</h1>
+  
 
+<div class="text-center">
+    <h1>Liste Utilisateur</h1><br>
 
-    <div class="col-sm-4">
+        <form action="/add" method="post">
+            {{csrf_field()}}
+    
+            <label for="surname" >Nom: 
+              <input type="text" name="surname" id="title" required="required">
+            </label>
 
-       <form action="/add" method="post">
+            <label for="surname" >Prenom: 
+              <input type="text" name="name" id="text" required="required">
+            </label>
+
+            <label for="email" >email: 
+              <input type="email" name="email" id="email" required="required">
+            </label>
+
+            <label for="birthday" >date de naissance: 
+            <input type="text" name="birthday" id="birthday" required="required" >
+            </label>
+            <input type="submit" class="btn btn-success"> 
+
+     </form>    
+    
+
+</div><br><br>
+
+    
+  <!--   <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Contenu</div>
+            <form action="/add" method="post">
        {{csrf_field()}}
     
-        <label for="surname" style="font-size: 20px">Nom: 
+        <label for="surname" >Nom: 
           <input type="text" name="surname" id="title">
         </label>
-        <label for="surname" style="font-size: 20px">Prenom: 
+        <label for="surname" >Prenom: 
           <input type="text" name="name" id="text">
         </label>
 
-        <label for="email" style="font-size: 20px">email: 
+        <label for="email" >email: 
           <input type="email" name="email" id="email">
         </label>
 
-        <label for="birthday" style="font-size: 20px">date de naissance: 
+        <label for="birthday" >date de naissance: 
         <input type="text" name="birthday" id="birthday">
         </label>
         <input type="submit" class="btn btn-success"> 
 
      </form>    
-
 </div>
-
+</div>
+ -->
 
 <table id="myTable" class="table-stripped table table-bordered">
 
