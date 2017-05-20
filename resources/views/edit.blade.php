@@ -2,9 +2,10 @@
 
 @section('content')
 
-<h1>Modification </h1>
 
-<div class="col-sm-12">
+<div class="text-center">
+    <h1>Modification de l'utilisateur</h1><br>
+<!-- <div class="col-sm-12"> -->
 	<form action="/editCheck/{{$personnes->id}}" method="post">
 		{{csrf_field()}}
 		<label for="surname">Nom

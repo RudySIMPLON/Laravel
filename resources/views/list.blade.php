@@ -1,12 +1,7 @@
 @extends('base')
 
 @section('content')
-<script>
-    $(document).ready(function(){
-        $('#myTable').DataTable();
 
-    });
-</script>
 
 <div class="text-center">
     <h1>Liste Utilisateur</h1><br>
@@ -43,7 +38,7 @@
                 </form>
             </th>
             <th><form action="/delete/{{$personne->id}}">
-                <button class="btn btn-primary">Supprimer</button>
+                <button class="btn btn-danger">Supprimer</button>
             </form>
         </th>
 
@@ -54,9 +49,16 @@
 </tbody>
 </table>
 
-<div id="example">
+<script src="//code.jquery.com/jquery.js"></script>
+        
+        <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+        
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+<script>
 
-</div>
+ $('#myTable').DataTable();
+
+</script>
 
 @stop
