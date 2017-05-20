@@ -15,18 +15,26 @@
 			]) !!};
 		</script>
 	</head>
-	<body>
+	
+	<body >
 
-		<div class="container">
+    	<div class="col-md-2 col-md-offset-1">
 
-		<div class="col-sm-7">
+			<div class="container">
 
-				@yield('content')
+			 	<div class="row">
 
+					<div class="col-sm-12">
+
+					@yield('content')
+					
+					</div>
+
+				</div>
 
 			</div>
-		</div>
 
+	</div>
 
 		<script src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 
