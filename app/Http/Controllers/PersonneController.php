@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Personne;
 
+
 class PersonneController extends Controller
 {
 
@@ -59,5 +60,7 @@ class PersonneController extends Controller
 		$personnes->delete();
 		return back();
 	}
+
+
 
 }
