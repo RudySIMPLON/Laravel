@@ -14,9 +14,14 @@
 			'csrfToken' => csrf_token(),
 			]) !!};
 		</script>
+		
 	</head>
+
 	
 	<body >
+
+	
+	<h1>chocolat</h1>
 
     	<div class="col-md-2 col-md-offset-1">
 
@@ -35,18 +40,19 @@
 			</div>
 
 	</div>
-<script src="//code.jquery.com/jquery.js"></script>
+
+		<script src="//code.jquery.com/jquery.js"></script>
         
         <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
         
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<!-- 	<script src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+		<script src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="js/app.js" ></script>
 
 
 
-		<script src="{{ mix('js/app.js') }}" ></script> -->
 
 	</body>
 	</html>
