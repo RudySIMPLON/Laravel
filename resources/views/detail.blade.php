@@ -1,12 +1,6 @@
 @extends('base')
 
 @section('content')
-<script>
-    $(document).ready(function(){
-        $('#myTable').DataTable();
-
-    });
-</script>
 
   
 
@@ -29,7 +23,7 @@
             </label>
 
             <label for="birthday" >date de naissance: 
-            <input type="text" name="birthday" id="birthday" required="required" >
+            <input type="date" name="birthday" id="birthday" required="required" >
             </label>
             <input type="submit" class="btn btn-success"> 
 
@@ -37,33 +31,6 @@
     
 
 </div><br><br>
-
-    
-  <!--   <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Contenu</div>
-            <form action="/add" method="post">
-       {{csrf_field()}}
-    
-        <label for="surname" >Nom: 
-          <input type="text" name="surname" id="title">
-        </label>
-        <label for="surname" >Prenom: 
-          <input type="text" name="name" id="text">
-        </label>
-
-        <label for="email" >email: 
-          <input type="email" name="email" id="email">
-        </label>
-
-        <label for="birthday" >date de naissance: 
-        <input type="text" name="birthday" id="birthday">
-        </label>
-        <input type="submit" class="btn btn-success"> 
-
-     </form>    
-</div>
-</div>
- -->
 
 <table id="myTable" class="table-stripped table table-bordered">
 
@@ -74,6 +41,8 @@
             <th>Nom</th>
             <th>Date de Naissance</th>
             <th>Email</th>
+            <th></th>
+            <th></th>
 
         </tr>
 
@@ -87,11 +56,11 @@
             <th>{{$personne->email}}</th>
             <th>
             <form action="/edit/{{$personne->id}}" method="get">
-                <button class="btn btn-primary">modifier</button>
+                <button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></button>
             </form>
             </th>
             <th><form action="/delete/{{$personne->id}}">
-            <button class="btn btn-primary">Supprimer</button>
+            <button class ="btn btn-danger delete"><span class="glyphicon glyphicon-remove"></button>
             </form>
             </th>
 
@@ -102,9 +71,17 @@
     </tbody>
 </table>
 
-<div id="example">
 
+<script src="//code.jquery.com/jquery.js"></script>
+        
+        <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+        
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
 
-</div>
+ <script>
+
+ $('#myTable').DataTable();
+
+</script> -->
 
 @stop
