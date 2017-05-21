@@ -21,7 +21,7 @@
 	<body >
 
 	
-	<h1>chocolat</h1>
+
 
     	<div class="col-md-2 col-md-offset-1">
 
