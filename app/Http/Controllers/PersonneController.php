@@ -14,7 +14,7 @@ class PersonneController extends Controller
 		return view('detail',compact('personnes'));
 
 	}
-		
+
 
 	public function get_table (){
 
@@ -25,34 +25,33 @@ class PersonneController extends Controller
 	public function add_people(Request $request){
 		
 		$personnes= new Personne;
-		$personnes->name = $request->name;
-		$personnes->surname = $request->surname;
+		$personnes->name = ucfirst($request->name);
+		$personnes->surname = ucfirst($request->surname);
 		$personnes->email = $request->email;
-        $personnes->birthday = $request->birthday;
+		$personnes->birthday = $request->birthday;
+
 		$personnes->save();
 		return back();
 
 	}
 
-		public function edit_form($id){
+	public function edit_form($id){
 
 		$personnes=Personne::find($id);
-	
+		
 		return view('edit',compact('personnes'));
 
-		}
+	}
 
-		public function check_edit($id,Request $request){
+	public function check_edit($id,Request $request){
 		
 		$personnes= Personne::find($id);
-		
-		$personnes->name = $request->name;
-		$personnes->surname = $request->surname;
+		$personnes->name = ucfirst($request->name);
+		$personnes->surname = ucfirst($request->surname);
 		$personnes->email = $request->email;
 		$personnes->birthday = $request->birthday;
 		$personnes->save();
 		return redirect('/');
-
 	}
 
 	public function delete($id){
@@ -60,7 +59,4 @@ class PersonneController extends Controller
 		$personnes->delete();
 		return back();
 	}
-
-
-
 }
