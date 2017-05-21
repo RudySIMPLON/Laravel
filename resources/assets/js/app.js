@@ -5,8 +5,13 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
 require('./bootstrap');
+
+
+// $(document).ready(function () {
+//         $('#myTable').DataTable();
+//     });
+
 
 window.Vue = require('vue');
 
