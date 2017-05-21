@@ -775,8 +775,11 @@ module.exports = g;
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
 __webpack_require__(29);
+
+$(document).ready(function () {
+  $('#myTable').DataTable();
+});
 
 window.Vue = __webpack_require__(37);
 
